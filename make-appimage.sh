@@ -12,8 +12,6 @@ export ICON=/usr/share/icons/hicolor/256x256/apps/krita.png
 export DESKTOP=/usr/share/applications/org.kde.krita.desktop
 export STARTUPWMCLASS=krita
 export OPTIMIZE_LAUNCH=1
-export DEPLOY_QT=1
-export QT_DIR=qt6
 
 # Deploy dependencies
 quick-sharun /usr/bin/krita* \
@@ -22,8 +20,7 @@ quick-sharun /usr/bin/krita* \
   /usr/share/color-schemes \
   /usr/share/color/icc/krita \
   /usr/share/krita* \
-  /usr/lib/qt6/plugins/imageformats/lib*.so* \
-  /usr/lib/qt6/plugins/sqldrivers/lib*.so* \
+  /usr/lib/qt6/plugins/sqldrivers \
   /usr/lib/libproxy/libpxbackend-1.0.so
 
 # Additional changes can be done in between here
@@ -33,4 +30,4 @@ quick-sharun --make-appimage
 
 # Test the app for 12 seconds, if the test fails due to the app
 # having issues running in the CI use --simple-test instead
-quick-sharun --simple-test ./dist/*.AppImage
+quick-sharun --test ./dist/*.AppImage
