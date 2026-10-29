@@ -11,7 +11,6 @@ export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}
 export ICON=/usr/share/icons/hicolor/256x256/apps/krita.png
 export DESKTOP=/usr/share/applications/org.kde.krita.desktop
 export STARTUPWMCLASS=krita
-export OPTIMIZE_LAUNCH=1
 export DEPLOY_PYTHON=1
 export USE_HOST_DRIVERS_EXPERIMENTAL=1
 
