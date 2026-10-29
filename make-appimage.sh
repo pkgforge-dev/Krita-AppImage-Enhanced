@@ -12,14 +12,17 @@ export ICON=/usr/share/icons/hicolor/256x256/apps/krita.png
 export DESKTOP=/usr/share/applications/org.kde.krita.desktop
 export STARTUPWMCLASS=krita
 export OPTIMIZE_LAUNCH=1
+export DEPLOY_PYTHON=1
 export USE_HOST_DRIVERS_EXPERIMENTAL=1
 
 # Deploy dependencies
 quick-sharun /usr/bin/krita* \
   /usr/lib/kritaplugins/krita*.so* \
+  /usr/lib/krita-python-libs \
   /usr/lib/libkrita*.so* \
   /usr/share/color-schemes \
   /usr/share/color/icc/krita \
+  /usr/share/gmic \
   /usr/share/krita* \
   /usr/lib/qt6/plugins/sqldrivers \
   /usr/lib/libproxy/libpxbackend-1.0.so
